@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { toRefs } from "vue";
-import type { Movement } from "./types";
-import MovementComponent from "./MovementComponent.vue";
+import type { MovementType } from "./types";
+import Movement from "./MovementComponent.vue";
 
 const props = defineProps<{
-  movements?: Movement[];
+  movements?: MovementType[];
 }>();
 
 const { movements } = toRefs(props);
@@ -18,7 +18,7 @@ const remove = (id: number) => {
   <div class="movements">
     <h2 class="title">History</h2>
     <div class="content">
-      <MovementComponent
+      <Movement
         v-for="movement in movements"
         :key="movement.id"
         :movement="movement"

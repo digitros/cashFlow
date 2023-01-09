@@ -3,12 +3,13 @@ import Layout from "./LayoutComponent.vue";
 import Header from "./HeaderComponent.vue";
 import Resume from "./Resume/ResumeComponent.vue";
 import Movements from "./Movements/MovementsComponent.vue";
-import type { Movement } from "./Movements/types";
+import type { MovementType } from "./Movements/types";
+import Action from "./ActionComponent.vue";
 
 const amount = undefined;
 const selectedDate = undefined;
 
-const movements: Movement[] = [
+const movements: MovementType[] = [
   {
     id: 1,
     title: "Movement",
@@ -58,7 +59,7 @@ const movements: Movement[] = [
             <div>Graphic</div>
           </template>
           <template #action>
-            <div>Action</div>
+            <Action />
           </template>
         </Resume>
       </div>

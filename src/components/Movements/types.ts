@@ -1,4 +1,4 @@
-export interface Movement {
+export interface MovementType {
   id: number;
   title: string;
   description: string;

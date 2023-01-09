@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, toRefs, defineEmits } from "vue";
-import type { Movement } from "./types";
+import type { MovementType } from "./types";
 import { currencyFormatter } from "@/utils/currencyFormatter.js";
 
 const props = defineProps<{
-  movement: Movement;
+  movement: MovementType;
 }>();
 const { movement } = toRefs(props);
 

@@ -5,7 +5,7 @@ import { computed, toRefs } from "vue";
 const props = defineProps<{
   totalAmount: number;
   amount?: number;
-  selectedDate?: Date;
+  selectedDate?: string | undefined;
 }>();
 const { totalAmount, amount, selectedDate } = toRefs(props);
 

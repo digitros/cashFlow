@@ -3,4 +3,5 @@ export interface MovementType {
   title: string;
   description: string;
   amount: number;
+  time: Date;
 }

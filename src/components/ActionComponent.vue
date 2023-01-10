@@ -8,13 +8,25 @@ const amount = ref(0);
 const description = ref("");
 const type = ref("Income");
 
+const emit = defineEmits(["create"]);
+
 const close = () => {
   showModal.value = false;
 };
 
 const submit = () => {
-  console.log(title.value, amount.value, description.value, type.value);
   close();
+  emit("create", {
+    title: title.value,
+    amount: type.value === "Income" ? amount.value : amount.value * -1,
+    description: description.value,
+    time: new Date(),
+    id: new Date().getTime(),
+  });
+  title.value = "";
+  amount.value = 0;
+  description.value = "";
+  type.value = "Income";
 };
 </script>
 
